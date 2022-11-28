@@ -1,3 +1,4 @@
+/* eslint-disable consistent-return */
 /* eslint-disable function-paren-newline */
 /* eslint-disable comma-dangle */
 /* eslint-disable implicit-arrow-linebreak */
@@ -49,7 +50,20 @@ export default function TopUpForm(props: TopUpFormProps) {
         paymentItem,
         nominalItem,
       };
-      localStorage.setItem('checkout-item', JSON.stringify(data));
+      const getCircularReplacer = () => {
+        const seen = new WeakSet();
+        return (key: any, value: object | null) => {
+          if (typeof value === 'object' && value !== null) {
+            if (seen.has(value)) {
+              return;
+            }
+            seen.add(value);
+          }
+          return value;
+        };
+      };
+      localStorage.setItem('checkout-item', JSON.stringify(data, getCircularReplacer()));
+      // localStorage.setItem('checkout-item', JSON.stringify(data));
       router.push('/checkout');
     }
   };

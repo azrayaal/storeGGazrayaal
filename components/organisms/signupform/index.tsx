@@ -1,3 +1,4 @@
+/* eslint-disable consistent-return */
 import cx from 'classnames';
 import Link from 'next/link';
 import { useRouter } from 'next/router';
@@ -18,7 +19,21 @@ export default function SignUpForm() {
       password,
     };
 
-    localStorage.setItem('user-form', JSON.stringify(userForm));
+    const getCircularReplacer = () => {
+      const seen = new WeakSet();
+      return (key: any, value: object | null) => {
+        if (typeof value === 'object' && value !== null) {
+          if (seen.has(value)) {
+            return;
+          }
+          seen.add(value);
+        }
+        return value;
+      };
+    };
+
+    localStorage.setItem('user-form', JSON.stringify(userForm, getCircularReplacer()));
+    // localStorage.setItem('user-form', JSON.stringify(userForm));
     router.push('/sign-up-photo');
   };
   return (
