@@ -3,6 +3,7 @@
 /* eslint-disable comma-dangle */
 /* eslint-disable implicit-arrow-linebreak */
 /* eslint-disable object-curly-newline */
+import stringify from 'json-stringify-safe';
 import { useRouter } from 'next/router';
 import { useState } from 'react';
 import { toast } from 'react-toastify';
@@ -50,20 +51,21 @@ export default function TopUpForm(props: TopUpFormProps) {
         paymentItem,
         nominalItem,
       };
-      const getCircularReplacer = () => {
-        const seen = new WeakSet();
-        return (key: any, value: object | null) => {
-          if (typeof value === 'object' && value !== null) {
-            if (seen.has(value)) {
-              return;
-            }
-            seen.add(value);
-          }
-          return value;
-        };
-      };
-      localStorage.setItem('checkout-item', JSON.stringify(data, getCircularReplacer()));
+      // const getCircularReplacer = () => {
+      //   const seen = new WeakSet();
+      //   return (key: any, value: object | null) => {
+      //     if (typeof value === 'object' && value !== null) {
+      //       if (seen.has(value)) {
+      //         return;
+      //       }
+      //       seen.add(value);
+      //     }
+      //     return value;
+      //   };
+      // };
+      // localStorage.setItem('checkout-item', JSON.stringify(data, getCircularReplacer()));
       // localStorage.setItem('checkout-item', JSON.stringify(data));
+      localStorage.setItem('checkout-item', stringify(data));
       router.push('/checkout');
     }
   };

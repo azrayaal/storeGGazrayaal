@@ -3,6 +3,7 @@ import cx from 'classnames';
 import Link from 'next/link';
 import { useRouter } from 'next/router';
 import { useState } from 'react';
+import stringify from 'json-stringify-safe';
 
 export default function SignUpForm() {
   const [name, setName] = useState('');
@@ -19,21 +20,22 @@ export default function SignUpForm() {
       password,
     };
 
-    const getCircularReplacer = () => {
-      const seen = new WeakSet();
-      return (key: any, value: object | null) => {
-        if (typeof value === 'object' && value !== null) {
-          if (seen.has(value)) {
-            return;
-          }
-          seen.add(value);
-        }
-        return value;
-      };
-    };
+    // const getCircularReplacer = () => {
+    //   const seen = new WeakSet();
+    //   return (key: any, value: object | null) => {
+    //     if (typeof value === 'object' && value !== null) {
+    //       if (seen.has(value)) {
+    //         return;
+    //       }
+    //       seen.add(value);
+    //     }
+    //     return value;
+    //   };
+    // };
 
-    localStorage.setItem('user-form', JSON.stringify(userForm, getCircularReplacer()));
+    // localStorage.setItem('user-form', JSON.stringify(userForm, getCircularReplacer()));
     // localStorage.setItem('user-form', JSON.stringify(userForm));
+    localStorage.setItem('user-form', stringify(userForm));
     router.push('/sign-up-photo');
   };
   return (
