@@ -1,3 +1,4 @@
+/* eslint-disable object-curly-newline */
 import axios, { AxiosRequestConfig } from 'axios';
 import Cookies from 'js-cookie';
 
