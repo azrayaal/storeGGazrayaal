@@ -3,7 +3,7 @@
 /* eslint-disable comma-dangle */
 /* eslint-disable implicit-arrow-linebreak */
 /* eslint-disable object-curly-newline */
-import stringify from 'json-stringify-safe';
+// import stringify from 'json-stringify-safe';
 import { useRouter } from 'next/router';
 import { useState } from 'react';
 import { toast } from 'react-toastify';
@@ -64,8 +64,8 @@ export default function TopUpForm(props: TopUpFormProps) {
       //   };
       // };
       // localStorage.setItem('checkout-item', JSON.stringify(data, getCircularReplacer()));
-      // localStorage.setItem('checkout-item', JSON.stringify(data));
-      localStorage.setItem('checkout-item', stringify(data));
+      localStorage.setItem('checkout-item', JSON.stringify(data));
+      // localStorage.setItem('checkout-item', stringify(data));
       router.push('/checkout');
     }
   };

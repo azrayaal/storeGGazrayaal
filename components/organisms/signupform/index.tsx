@@ -3,7 +3,7 @@ import cx from 'classnames';
 import Link from 'next/link';
 import { useRouter } from 'next/router';
 import { useState } from 'react';
-import stringify from 'json-stringify-safe';
+// import stringify from 'json-stringify-safe';
 
 export default function SignUpForm() {
   const [name, setName] = useState('');
@@ -34,8 +34,8 @@ export default function SignUpForm() {
     // };
 
     // localStorage.setItem('user-form', JSON.stringify(userForm, getCircularReplacer()));
-    // localStorage.setItem('user-form', JSON.stringify(userForm));
-    localStorage.setItem('user-form', stringify(userForm));
+    localStorage.setItem('user-form', JSON.stringify(userForm));
+    // localStorage.setItem('user-form', stringify(userForm));
     router.push('/sign-up-photo');
   };
   return (

@@ -1,7 +1,7 @@
 /* eslint-disable consistent-return */
 /* eslint-disable linebreak-style */
 // import { useRouter } from 'next/router';
-import stringify from 'json-stringify-safe';
+// import stringify from 'json-stringify-safe';
 import { useEffect } from 'react';
 import Footer from '../../components/organisms/footer';
 import Navbar from '../../components/organisms/navbar';
@@ -30,8 +30,8 @@ export default function Detail({ dataItem, nominals, payment }: DetailProps) {
     //   };
     // };
     // localStorage.setItem('data-item', JSON.stringify(dataItem, getCircularReplacer()));
-    // localStorage.setItem('data-item', JSON.stringify(dataItem));
-    localStorage.setItem('data-item', stringify(dataItem));
+    localStorage.setItem('data-item', JSON.stringify(dataItem));
+    // localStorage.setItem('data-item', stringify(dataItem));
   }, []);
 
   return (
