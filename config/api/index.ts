@@ -1,10 +1,14 @@
 /* eslint-disable object-curly-newline */
 import axios, { AxiosRequestConfig } from 'axios';
+
 import Cookies from 'js-cookie';
 
 interface callAPIProps extends AxiosRequestConfig {
   token?: boolean;
   serverToken?: string;
+  url: string;
+  method: string;
+  data: {};
 }
 
 export default async function callAPI({ url, method, data, token, serverToken }: callAPIProps) {
