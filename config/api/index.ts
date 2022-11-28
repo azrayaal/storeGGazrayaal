@@ -6,9 +6,9 @@ import Cookies from 'js-cookie';
 interface callAPIProps extends AxiosRequestConfig {
   token?: boolean;
   serverToken?: string;
-  url: string;
-  method: string;
-  data: {};
+  url?: string;
+  method?: string;
+  data?: {};
 }
 
 export default async function callAPI({ url, method, data, token, serverToken }: callAPIProps) {
@@ -32,7 +32,7 @@ export default async function callAPI({ url, method, data, token, serverToken }:
     method,
     data,
     headers,
-  }).catch((err) => err.response);
+  }).catch((err: any) => err.response);
   if (response.status > 300) {
     const res = {
       error: true,
