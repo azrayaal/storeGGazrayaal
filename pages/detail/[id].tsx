@@ -28,8 +28,8 @@ export default function Detail({ dataItem, nominals, payment }: DetailProps) {
     //     return value;
     //   };
     // };
-    localStorage.setItem('data-item', JSON.stringify(dataItem, getCircularReplacer()));
-    // localStorage.setItem('data-item', JSON.stringify(dataItem));
+    // localStorage.setItem('data-item', JSON.stringify(dataItem, getCircularReplacer()));
+    localStorage.setItem('data-item', JSON.stringify(dataItem));
   }, []);
 
   return (
