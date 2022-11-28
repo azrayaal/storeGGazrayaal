@@ -17,7 +17,7 @@ export default function SidebarItem(props: Partial<SidebarItemProps>) {
 
   return (
     <div>
-      <button type="button" className=" item mb-30" onClick={onClick}>
+      <button type="button" className="btn bg-transparent item mb-30" onClick={onClick}>
         <div className="me-3">
           <Image src={`/icon/sidebar/${iconMenu}.svg`} width={25} height={25} alt="logo" />
         </div>

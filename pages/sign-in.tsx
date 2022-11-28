@@ -12,7 +12,7 @@ export default function SignIn() {
               <div className="pb-50">
                 <Link href="">
                   <a className="navbar-brand">
-                    <Image src="/icon/logo.svg" width={60} height={60} alt="logo" />
+                    <Image src="/icon/favicon.ico" width={60} height={60} />
                   </a>
                 </Link>
               </div>
