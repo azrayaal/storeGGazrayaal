@@ -1,7 +1,6 @@
 /* eslint-disable linebreak-style */
 // import { useRouter } from 'next/router';
 import { useEffect } from 'react';
-// import { useParams } from 'react-router-dom';
 import Footer from '../../components/organisms/footer';
 import Navbar from '../../components/organisms/navbar';
 import TopUpForm from '../../components/organisms/topUpForm';
