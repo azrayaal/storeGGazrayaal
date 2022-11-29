@@ -22,7 +22,7 @@ export default function Home() {
         <meta name="description" content="Kami menyediakan voucer top up game yang tidak dijual di manapun" />
         <meta property="og:title" content="Store Azrayaal - Get a new Experience in gaming with azrayaal" />
         <meta property="og:description" content="Kami menyediakan voucer top up game yang tidak dijual di manapun" />
-        <meta property="og:img" content="https://imageurlkalian" />
+        <meta property="og:img" content="/icon/favicon.ico" />
         <meta property="og:url" content="https://storeGGazrayaal" />
       </Head>
       <Navbar />

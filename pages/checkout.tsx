@@ -13,7 +13,7 @@ export default function CheckOut() {
       <section className="checkout mx-auto pt-md-100 pb-md-145 pt-30 pb-30">
         <div className="container-fluid">
           <div className="logo text-md-center text-start pb-50">
-            <Link href="#.com">
+            <Link href="/">
               <a className="">
                 <Image src="/icon/favicon.ico" width={60} height={60} alt="logo" />
               </a>
