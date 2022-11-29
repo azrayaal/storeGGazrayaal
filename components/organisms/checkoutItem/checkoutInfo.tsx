@@ -5,12 +5,13 @@ export default function CheckoutInfo() {
     bankAccountName: '',
     paymentItem: {
       payment: {
-        bankName: '',
-        name: '',
-        noRekening: '',
+        type: '',
       },
       bank: {
         type: '',
+        bankName: '',
+        name: '',
+        noRekening: '',
       },
     },
   });
@@ -30,19 +31,19 @@ export default function CheckoutInfo() {
       </p>
       <p className="text-lg color-palette-1 mb-20">
         Type
-        <span className="payment-details">{dataPayment.paymentItem.bank.type}</span>
+        <span className="payment-details">{dataPayment.paymentItem.payment.type}</span>
       </p>
       <p className="text-lg color-palette-1 mb-20">
         Bank Name
-        <span className="payment-details">{dataPayment.paymentItem.payment.bankName}</span>
+        <span className="payment-details">{dataPayment.paymentItem.bank.bankName}</span>
       </p>
       <p className="text-lg color-palette-1 mb-20">
         Bank Account Name
-        <span className="payment-details">{dataPayment.paymentItem.payment.name}</span>
+        <span className="payment-details">{dataPayment.paymentItem.bank.name}</span>
       </p>
       <p className="text-lg color-palette-1 mb-20">
         Bank Number
-        <span className="payment-details">{dataPayment.paymentItem.payment.noRekening}</span>
+        <span className="payment-details">{dataPayment.paymentItem.bank.noRekening}</span>
       </p>
     </div>
   );

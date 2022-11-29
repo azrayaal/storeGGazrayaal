@@ -9,11 +9,11 @@ export default function CheckoutConfirmation() {
   const router = useRouter();
 
   const onSubmit = async () => {
-    // console.log('submit', checkbox);
     const dataItemFromLocal = localStorage.getItem('data-item');
     const dataTopupFromLocal = localStorage.getItem('checkout-item');
     const dataItem = JSON.parse(dataItemFromLocal!);
     const dataTopup = JSON.parse(dataTopupFromLocal!);
+    // console.log('submit', dataTopup);
 
     if (!checkbox) {
       toast.error('Pastikan anda telah melakukan pembayaran', {
@@ -23,8 +23,8 @@ export default function CheckoutConfirmation() {
     const data = {
       voucher: dataItem._id,
       nominal: dataTopup.nominalItem._id,
-      payment: dataTopup.paymentItem.bank._id,
-      bank: dataTopup.paymentItem.payment._id,
+      payment: dataTopup.paymentItem.payment._id,
+      bank: dataTopup.paymentItem.bank._id,
       name: dataTopup.bankAccountName,
       accountUser: dataTopup.verifyID,
     };

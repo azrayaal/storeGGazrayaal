@@ -9,13 +9,18 @@ export default function CheckoutDetail() {
       coinQuantity: 0,
       price: 0,
     },
+    paymentItem: {
+      payment: {
+        _id: '',
+      },
+    },
     _id: '',
   });
 
   useEffect(() => {
     const dataFromLocal = localStorage.getItem('checkout-item');
     const dataItemLocal = JSON.parse(dataFromLocal!);
-    // console.log('dataTopUp=>>', dataItemLocal);
+    console.log('dataTopUp=>>', dataItemLocal);
     seDataTopUp(dataItemLocal);
   }, []);
 
@@ -32,7 +37,8 @@ export default function CheckoutDetail() {
       </p>
       <p className="text-lg color-palette-1 mb-20">
         Order ID
-        <span className="purchase-details">{dataTopUp._id}</span>
+        <span className="purchase-details">{`#${dataTopUp.paymentItem.payment._id}`}</span>
+        {/* <span className="purchase-details">{dataTopUp._id}</span> */}
       </p>
       <p className="text-lg color-palette-1 mb-20">
         Item
