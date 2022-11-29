@@ -2,7 +2,7 @@
 const nextConfig = {
   reactStrictMode: true,
   images: {
-    domains: [''],
+    domains: ['admin-storegg-azrayaal.herokuapp.com'],
   },
 };
 

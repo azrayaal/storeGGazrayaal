@@ -7,14 +7,7 @@ import CheckoutDetail from '../components/organisms/checkoutItem/checkoutDetail'
 import CheckoutInfo from '../components/organisms/checkoutItem/checkoutInfo';
 import { JWTPayloadsTypes, UserTypes } from '../services/data-types';
 
-// interface CheckoutProps {
-//   user: UserTypes;
-// }
-
 export default function CheckOut() {
-  // export default function CheckOut(props: CheckoutProps) {
-  // const { user } = props;
-  // console.log('user=>>', user);
   return (
     <div>
       <section className="checkout mx-auto pt-md-100 pb-md-145 pt-30 pb-30">

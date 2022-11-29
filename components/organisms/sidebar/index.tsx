@@ -1,6 +1,5 @@
 import Cookies from 'js-cookie';
 import jwtDecode from 'jwt-decode';
-import Image from 'next/image';
 import { useRouter } from 'next/router';
 import { useEffect, useState } from 'react';
 import { JWTPayloadsTypes } from '../../../services/data-types';
@@ -35,7 +34,7 @@ export default function Sidebar() {
     <section className="sidebar">
       <div className="content pt-50 pb-30 ps-30">
         <div className="user text-center pb-50 pe-30">
-          <Image src={users.avatar} width="90" height="90" alt="hehe" className="img-fluid mb-20 rounded-circle" />
+          <img src={users.avatar} width="90" height="90" alt="hehe" className="img-fluid mb-20 rounded-circle" />
           <h2 className="fw-bold text-xl color-palette-1 m-0">{users.username}</h2>
           <p className="color-palette-2 m-0">{users.email}</p>
         </div>

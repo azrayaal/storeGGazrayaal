@@ -2,7 +2,6 @@
 /* eslint-disable implicit-arrow-linebreak */
 import Cookies from 'js-cookie';
 import jwtDecode from 'jwt-decode';
-import Image from 'next/image';
 import { useRouter } from 'next/router';
 import { useEffect, useState } from 'react';
 import { toast } from 'react-toastify';
@@ -43,7 +42,6 @@ export default function EditProfile() {
       // console.log('gambar', user.avatar);
       setUser(userFromPayload);
     }
-    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
 
   const router = useRouter();
@@ -83,9 +81,9 @@ export default function EditProfile() {
                 <div className="image-upload">
                   <label htmlFor="avatar">
                     {imagePreview === '/' ? (
-                      <Image src={user.avatar} alt="a" width={90} height={90} className="avatar img-fluid rounded-circle" />
+                      <img src={user.avatar} alt="" width="90" height="90" className="avatar img-fluid rounded-circle" />
                     ) : (
-                      <Image src={imagePreview} alt="a" width={90} height={90} className="avatar img-fluid rounded-circle" />
+                      <img src={imagePreview} alt="" width="90" height="90" className="avatar img-fluid rounded-circle" />
                     )}
                   </label>
                   <input

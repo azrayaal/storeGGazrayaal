@@ -17,21 +17,7 @@ interface DetailProps {
 }
 export default function Detail({ dataItem, nominals, payment }: DetailProps) {
   useEffect(() => {
-    // const getCircularReplacer = () => {
-    //   const seen = new WeakSet();
-    //   return (key: any, value: object | null) => {
-    //     if (typeof value === 'object' && value !== null) {
-    //       if (seen.has(value)) {
-    //         return;
-    //       }
-    //       seen.add(value);
-    //     }
-    //     return value;
-    //   };
-    // };
-    // localStorage.setItem('data-item', JSON.stringify(dataItem, getCircularReplacer()));
     localStorage.setItem('data-item', JSON.stringify(dataItem));
-    // localStorage.setItem('data-item', stringify(dataItem));
   }, []);
 
   return (
@@ -84,7 +70,7 @@ interface GetStaticProps {
 export async function getStaticProps({ params }: GetStaticProps) {
   const { id } = params;
   const data = await getDetailVoucher(id);
-  // console.log('data dari getstprops=>>', data);
+  console.log('data dari getstprops=>>', data);
   return {
     props: {
       dataItem: data,

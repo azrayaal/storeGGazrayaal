@@ -19,6 +19,7 @@ export default function CheckoutInfo() {
     const dataFromLocal = localStorage.getItem('checkout-item');
     const dataItemFromLocal = JSON.parse(dataFromLocal!);
     setDataPayment(dataItemFromLocal);
+    // console.log('datapayment', dataItemFromLocal);
   }, []);
   return (
     <div className="payment pt-md-50 pb-md-50 pt-10 pb-10">

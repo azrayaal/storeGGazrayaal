@@ -1,6 +1,5 @@
 import Cookies from 'js-cookie';
 import jwtDecode from 'jwt-decode';
-import Image from 'next/image';
 import Link from 'next/link';
 import { useRouter } from 'next/router';
 import { useEffect, useState } from 'react';
@@ -39,7 +38,7 @@ export default function Auth() {
         <div className="vertical-line d-lg-block d-none" />
         <div>
           <a className="dropdown-toggle ms-lg-40" href="#" role="button" id="dropdownMenuLink" data-bs-toggle="dropdown" aria-expanded="false">
-            <Image src={user.avatar} className="rounded-circle" width="40" height="40" alt="" />
+            <img src={user.avatar} className="rounded-circle" width="40" height="40" alt="" />
           </a>
 
           <ul className="dropdown-menu border-0" aria-labelledby="dropdownMenuLink">
