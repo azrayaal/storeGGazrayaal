@@ -1,3 +1,4 @@
+import Image from 'next/image';
 import React from 'react';
 import NumberFormat from 'react-number-format';
 import { historyTransactionsTypes } from '../../../services/data-types';
@@ -19,7 +20,7 @@ export default function TransactionDetailContent(props: TransactionDetailContent
               <div className="game-checkout d-flex flex-row align-items-center">
                 <div className="pe-4">
                   <div className="cropped">
-                    <img src={`${IMG}/${data.historyVoucherTopup.thumbnail}`} width="200" height="130" className="img-fluid" alt="" />
+                    <Image src={`${IMG}/${data.historyVoucherTopup.thumbnail}`} width="200" height="130" className="img-fluid" alt="" />
                   </div>
                 </div>
                 <div>

@@ -23,6 +23,7 @@
     "jsx-a11y/label-has-associated-control": "off",
     "react/jsx-indent-props": "off",
     "react/no-unknown-property": "off",
+    "react-hooks/exhaustive-deps": "off",
     "object-curly-newline": [
       "error",
       {

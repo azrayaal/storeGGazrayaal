@@ -1,3 +1,4 @@
+import Image from 'next/image';
 import React from 'react';
 
 interface TopUpItemProps {
@@ -30,7 +31,7 @@ export default function TopUpItem(props: TopUpItemProps) {
   return (
     <div className="row align-items-center">
       <div className="col-md-12   col-4">
-        <img src={`${ROOT_IMG}/${data.thumbnail}`} width="280" height="380" className="img-fluid" alt="" />
+        <Image src={`${ROOT_IMG}/${data.thumbnail}`} width="280" height="380" className="img-fluid" alt="" />
       </div>
       {/* <!-- Mobile: Game title --> */}
       <div className="col-md-12 col-8 d-md-none d-block">

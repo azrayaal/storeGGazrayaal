@@ -10,7 +10,7 @@ export default function SignUp() {
           <div className="pb-50">
             <Link href="/">
               <a className="navbar-brand">
-                <Image src="/icon/logo.svg" width={60} height={60} />
+                <Image src="/icon/logo.svg" width={60} height={60} alt="" />
               </a>
             </Link>
           </div>

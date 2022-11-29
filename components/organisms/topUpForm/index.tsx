@@ -105,6 +105,7 @@ export default function TopUpForm(props: TopUpFormProps) {
               payment.banks.map((bank) => (
                 <PaymentItem
                   // eslint-disable-next-line react/jsx-max-props-per-line
+                  key={payment._id}
                   _id={bank._id}
                   type={payment.type}
                   name={bank.bankName}

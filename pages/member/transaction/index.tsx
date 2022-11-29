@@ -22,7 +22,7 @@ export default function Transactions() {
         theme: 'colored',
       });
     } else {
-      // console.log('data>>', response);
+      // console.log('data>>',\facebook\react\issues\14920 response);
       setTotal(response.data.total);
       // setStatus(response.data.data);
       setTrasanctions(response.data.data);

@@ -1,6 +1,8 @@
 /* eslint-disable react/jsx-no-useless-fragment */
 /* eslint-disable linebreak-style */
 
+import Link from 'next/link';
+
 export default function NotFound() {
   return (
     <section className="not-found mx-auto pt-145 pb-md-212 pb-100">
@@ -204,9 +206,9 @@ export default function NotFound() {
           </p>
         </div>
         <div className="button-group d-flex flex-column mx-auto">
-          <a className="btn btn-homepage fw-medium text-lg text-white rounded-pill" href="/" role="button">
-            Homepage
-          </a>
+          <Link href="/">
+            <a className="btn btn-homepage fw-medium text-lg text-white rounded-pill">Homepage</a>
+          </Link>
         </div>
       </div>
     </section>

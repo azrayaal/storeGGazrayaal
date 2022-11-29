@@ -8,7 +8,7 @@ export default function Footer() {
           <div className="row">
             <div className="col-lg-4 text-lg-start text-center">
               <a href="azrayaal.space" target="_blank" className="mb-30">
-                <Image src="/icon/favicon.ico" width={60} height={60} />
+                <Image src="/icon/favicon.ico" width={60} height={60} alt="" />
               </a>
               <p className="mt-30 text-lg color-palette-1 mb-30">
                 StoreGG membantu gamers

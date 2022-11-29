@@ -1,3 +1,4 @@
+import Image from 'next/image';
 import Link from 'next/link';
 
 export default function signUpPhotoSuccess() {
@@ -10,7 +11,7 @@ export default function signUpPhotoSuccess() {
               <div className="mb-20">
                 <div className="image-upload text-center">
                   <label htmlFor="file-input">
-                    <img src="/img/avatar-1.png" width="120" height="120" className="rounded-circle" alt="" />
+                    <Image src="/img/avatar-1.png" width={120} height={120} className="rounded-circle" alt="#" />
                   </label>
                   <input id="file-input" type="file" />
                 </div>

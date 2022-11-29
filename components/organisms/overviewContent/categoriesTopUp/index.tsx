@@ -31,7 +31,7 @@ export default function CategoriesTopUp() {
             <div className="col-lg-4 ps-15 pe-15 pb-lg-0 pb-4" key={item._id}>
               <div className="categories-card">
                 <div className="d-flex align-items-center mb-24">
-                  <Image src="/icon/categorylogo1.svg" width={60} height={60} />
+                  <Image src="/icon/categorylogo1.svg" width={60} height={60} alt="" />
                   <p className="color-palette-1 mb-0 ms-12">
                     Game
                     <br />

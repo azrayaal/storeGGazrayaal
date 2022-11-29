@@ -3,12 +3,12 @@ import axios, { AxiosRequestConfig } from 'axios';
 
 import Cookies from 'js-cookie';
 
-interface callAPIProps extends AxiosRequestConfig {
+interface callAPIProps extends AxiosRequestConfig<any> {
   token?: boolean;
   serverToken?: string;
-  url?: string;
-  method?: string;
-  data?: {};
+  // url?: string;
+  // method?: string;
+  // data?: {};
 }
 
 export default async function callAPI({ url, method, data, token, serverToken }: callAPIProps) {

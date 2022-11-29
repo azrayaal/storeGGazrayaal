@@ -1,3 +1,4 @@
+import Image from 'next/image';
 import Link from 'next/link';
 import React from 'react';
 import NumberFormat from 'react-number-format';
@@ -17,7 +18,7 @@ export default function TableRow(props: TableRowProps) {
   return (
     <tr data-category="pending" className="align-middle" key={id} id={id}>
       <th scope="row">
-        <img className="float-start me-3 mb-lg-0 mb-3" src={img} width="80" height="60" alt="" />
+        <Image className="float-start me-3 mb-lg-0 mb-3" src={img} width={80} height={60} alt="a" />
         <div className="game-title-header">
           <p className="game-title fw-medium text-start color-palette-1 m-0">{title}</p>
           <p className="text-xs fw-normal text-start color-palette-2 m-0">{category}</p>
