@@ -15,7 +15,7 @@ export default function Reached() {
           <div className="horizontal-line mt-6 mb-6 me-lg-35 ms-lg-35 d-lg-none d-block" />
           <div className="vertical-line me-lg-35 ms-lg-35 d-lg-block d-none" />
 
-          <DetailReached detail1="99,9%" detail2="Happy Players" />
+          <DetailReached detail1="87,9%" detail2="Happy Players" />
 
           <div className="horizontal-line mt-6 mb-6 me-lg-35 ms-lg-35 d-lg-none d-block" />
           <div className="vertical-line me-lg-35 ms-lg-35 d-lg-block d-none" />
