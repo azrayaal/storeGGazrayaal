@@ -20,7 +20,7 @@ export default function Features() {
 
   return (
     <section className="featured-game pt-50 pb-50">
-      <div className="container-fluid">
+      <div id="discover" className="container-fluid">
         <h2 className="text-4zxl fw-bold color-palette-1 mb-30">
           Our Featured
           <br />
