@@ -11,10 +11,11 @@ export default function Features() {
   const getFeatureGameList = useCallback(async () => {
     const data = await getFeaturedGame();
     setGameList(data);
-  }, [getFeaturedGame]);
+  }, []);
 
   useEffect(() => {
     getFeatureGameList();
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
 
   return (
