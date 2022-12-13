@@ -75,7 +75,9 @@ export default function signUpPhoto() {
             <div>
               <div className="mb-20">
                 <div className="image-upload text-center">
-                  <label htmlFor="image">{imagePreview ? <Image src={imagePreview} className="img-upload" alt="upload" /> : <Image src="/icon/upload.svg" width={120} height={120} className="img-upload" alt="upload" />}</label>
+                  <label htmlFor="image">
+                    {imagePreview ? <Image width={120} height={120} src={imagePreview} className="img-upload" alt="upload" /> : <Image src="/icon/upload.svg" width={120} height={120} className="img-upload" alt="upload" />}
+                  </label>
                   {/* kalo buat input yg biasa dia 'event.target.value'
                    kalo buat masukin gambar ' event.target.files' */}
                   <input
