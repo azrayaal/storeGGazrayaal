@@ -70,7 +70,7 @@ interface GetStaticProps {
 export async function getStaticProps({ params }: GetStaticProps) {
   const { id } = params;
   const data = await getDetailVoucher(id);
-  console.log('data dari getstprops=>>', data);
+  // console.log('data dari getstprops=>>', data);
   return {
     props: {
       dataItem: data,
